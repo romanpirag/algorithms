@@ -1,0 +1,576 @@
+🤖JavaScript Algorithms                                                                                                             
+            
+ 
+ARRAY METHODS-------------------------------------------------------------------------------
+.map: Does specific action to every element within an array and returns a new array. 
+.filter: Returns a new array with the desired outcome specified. 
+.reject: The opposite of .filter returns a new array with everything minus specified.
+.find: Returns the first element that matches specified outcome. 
+--------------------------------------------------------------------------------------------          
+
+--------------------------------------------------------------------------------------------                                                                                      
+AppAcademy Practice Problems:
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+1. Reverse a String: 
+--------------------------------------------------------------------------------------------
+Write a function that will take a string as input, and return a new string with the same letters in reverse order. 
+
+Using .map: <---(BEST)
+
+let reverseString = string => {
+  let stringSplit = string.split("")
+  let reversed = []
+  stringSplit.map(letter => reversed.unshift(letter)) 
+  return reversed.join("")
+}
+
+console.log(reverseString("batman")) 
+
+Using for loop:      
+
+let reverseString = string => {
+  let stringSplit = string.split("")
+  let reversed = []
+  for (let i = stringSplit.length - 1; i >= 0; i--) {
+    reversed.push(stringSplit[i])
+  }
+  return reversed.join("")
+}
+
+console.log(reverseString("batman"))
+                                                                                                                              
+Using forEach:
+                                                                                                                    
+let reverseString = string => {
+  let stringSplit = string.split("")
+  let reversed = []
+  stringSplit.forEach(function(letter) {
+    reversed.unshift(letter)
+  })
+  return reversed.join("")
+}    
+
+console.log(reverseString("batman"))  
+
+Using forEach (arrow function condensed):
+
+let reverseString = string => {
+  let stringSplit = string.split("")
+  let reversed = []
+  stringSplit.forEach(letter => reversed.unshift(letter)) 
+  return reversed.join("")
+}
+
+console.log(reverseString("batman"))
+
+TALKING THROUGH IT: First you need to create a variable that holds string.split(""). 
+We name it split and it becomes an array which holds the split up letters of string. 
+Then we create an empty array called reversed, that we will be feeding the letters into backwards.
+Then string.length.times which means you want the next process to happen the number of letters in string. 
+For instance if the word is "Happy", it will read as string.5.times. 
+do this thing that comes next.Then you do curly braces and inside you first designate the array you are feeding into, reversed. 
+Then you use shovel to put split into it backwards by using .pop, which takes the last part of an array. 
+So you are doing this .pop function the amount of times as there are letters in string. 
+Then you need to join the array reversed by doing reversed.join, otherwise it is still an array of letters.
+You can also use do and end instead of curly braces on the last part. 
+You can also use .push instead of using the shovel <<. 
+
+A different way to phrase it: You need to take a string and get return it backwards.  
+So the first obvious step is to split each part of the argument string. 
+You need a container to hold this new array of split up keys.  
+So you make a variable called split and set it equal to the argument string.split(""). 
+This makes the variable split into an array which has the individual characters of the argument string. 
+Now you need a new array to place the letters into backwards. 
+So you create an empty array called reversed.
+Then you need each character in the argument string to be popped into your new empty array. 
+First you say string.length.times, which just means, do this next function the amount that is the string. 
+Because you want all the letters placed in backwards you have to do it the same number as the string. 
+So since the argument is "Hello", because of .length.times it's saying, do this next thing 5 times.
+Then you either write do or just use curly braces, and designate the array reversed to .push split into. 
+But in order to get each individual character out of split, you have to use .pop.
+That takes each character from the end of an array and pushes it into the array reversed.
+Then in order to return a string and not an array, you have to use .join on reversed.  
+
+Other solution by using while loop and the index of a string without using .split:
+
+let stringReverse = string => {
+  reversed = ""
+  let i = 0
+  while (i < string.length) {
+      reversed = string[i] + reversed 
+      i++
+  }
+  return reversed 
+}
+
+console.log(stringReverse("Loki"))
+
+or like this
+
+const reverseString = (string) => {
+    let reversed = ""
+    let i = 0
+    while (i < string.length) {
+        reversed += string[i] 
+        i++
+    }
+    return reversed 
+}
+
+TALKING THROUGH IT:
+Here they first create an empty string called reversed_string.
+Then they make a counter called i that starts at 0.
+While i is less than string.length just says, do this next part until i is the length of the string. 
+Obviously down below they increment i by 1 each iteration to make that happen. 
+Then the while loop they say, reversed_string is equal to the index of string (which will go up each time incrementally due to i, 
+plus the reversed_string.
+What this creates is a situation where each index is placed into reversed_string, 
+and each time it goes through an iteration, the last number is shifted forward and the new number is placed in front. 
+Thats what creates the reversed function. 
+
+--------------------------------------------------------------------------------------------                                                                                              
+2. Factorial: 
+--------------------------------------------------------------------------------------------
+Write a function that takes an integer 'num' in; it should return n*(n-1)*(n-2)*...etc
+
+Using a while loop: 
+
+let factorial = (num) => {
+    let result = 1
+    while (num > 0) {
+        result *= num 
+        num--
+    }
+    return result 
+}
+
+console.log(factorial(5))
+
+Using a for loop:
+
+function factorial(num) {       <---(BEST)
+    sum = 1
+    for(num; num > 0; num--) {
+        sum *= num
+    }
+    return sum
+}
+
+console.log(factorial(5))
+
+Using a counter + while loop and going up instead of down:
+
+function factorial(num) {
+    let sum = 1
+    let i = 1 
+    while (i <= num) {
+        sum *= i 
+        i++
+    }
+    return sum 
+}
+
+TALKING THROUGH IT: You first start by creating a variable result that equals 1. Then you say that while n is larger than 0, make result = result * n. So basically you want your arguments number to multiply with the result, which in the first pass is your number multiplied by 1. 0 wouldn't work as that equals 0.   Then you put n -= 1 so that with each iteration your argument number n becomes one less.  First iteration: result = 1 * 5 (result becomes 5) Second Iteration: result = 5 * 4 (result becomes 20) Third Iteration: result = 20 * 3 (result becomes 60) Fourth Iteration: result = 60 * 2 (result becomes 120) Fifth Iteration: result = 120 * 1 (result becomes 120) Then it stops because you designated that while n > 0 So your final number is the factorial of 5, 120. 
+Then you have to return the result outside of the while loop.
+
+--------------------------------------------------------------------------------------------                                                                                              
+3. Longest Word: 
+--------------------------------------------------------------------------------------------
+Write a function that takes in a string. Return the longest word in the string. 
+
+
+Using .find: <---(BEST)
+
+const longestWord = (sentence) => {
+    let splitSent = sentence.split(" ")
+    longest = ""
+    splitSent.find(word => {
+        if (word.length > longest.length) {
+            longest = word
+        }
+    })
+    return longest
+}
+
+console.log(longestWord("I am happycakes to be here"))
+
+Using a for loop:
+
+const longestWord = (sentence) => {
+    let splitSent = sentence.split(" ")
+    longest = ""
+    
+    for (let i = 0; i < splitSent.length; i++) {
+        if (splitSent[i].length > longest.length) {
+            longest = splitSent[i]
+        }
+    }
+    return longest
+}
+
+console.log(longestWord("I am happycakes to be here"))
+
+Using a while loop:
+
+function longestWord(sentence) {
+    let splitSentence = sentence.split(" ")
+    let longest = ""
+    let i = 0
+    while (i < splitSentence.length) {
+        if(splitSentence[i].length > longest.length) {
+            longest = splitSentence[i]
+        }
+        i++
+    }
+    return longest 
+}
+
+
+console.log(longestWord("I am a happy boy"))
+
+--------------------------------------------------------------------------------------------                                                                                              
+4. Sum Nums: 
+--------------------------------------------------------------------------------------------
+Write a function that takes in an integer 'num' and returns the sum of all integers between
+Zero and num, up to and including 'num'. 
+
+Doing it backwards with a while loop:  <---(BEST)
+
+function sumNums(num) {
+    sum = 0
+    while(num > 0) {
+        sum += num
+        num-- 
+    }
+    return sum 
+}
+
+
+console.log(sumNums(6))
+
+first iteration: sum: 0 + num 6 | sum = 6   
+second iteration: sum: 6 + num 5 | sum = 11 
+third iteration: sum: 11 + num 4 | sum = 15 
+fourth iteration: sum: 15 + num 3 | sum = 18
+fifth iteration: sum: 18 + num 2 | sum = 20 
+sixth iteration: sum: 20 + num 1 | sum = 21 
+
+Using a while loop: 
+
+const sumNums = (num) => {
+    let sum = 0 
+    let i = 0
+    while (i <= num) {
+        sum += i
+        i++
+    } 
+    return sum
+}
+
+console.log(sumNums(6))
+
+Using a for loop: 
+
+const sumNums = num => {
+  let sum = 0
+  for (let i = 0; i <= num; i++) {
+    sum += i
+  }
+
+  return sum
+}
+
+console.log(sumNums(6))
+
+first iteration: sum: 1 + result = 0 | so result = 1
+second iteration: sum: 2 + result = 1| so result = 3
+third iteration: sum: 3 + result = 3 | so result = 6
+fourth iteration: sum 4 + result = 6 | so result = 10
+fifth iteration: sum 5 + result = 10 | so result = 15
+sixth iteration: sum 6 + result = 15 | so result = 21
+
+--------------------------------------------------------------------------------------------                                                                                              
+5. Time Conversion: 
+--------------------------------------------------------------------------------------------
+Write a function that will take in a number of minutes, and returns a string that formats
+the number into "hours:minutes'.
+
+function timeConversion(minutes) {
+    let hours = 0 
+    while(minutes >= 60) {
+        hours += 1
+        minutes -= 60
+    }
+    return `Hours: ${hours} Minutes: ${minutes}`
+}
+
+console.log(timeConversion(592))
+
+TALKING THROUGH IT:
+We declare the function timeConversion and pass in the argument (minutes).
+We declare variable hours and set it equal to 0.
+Then we create a while loop stating that while minutes is greater than or equal to 60:
+	1 gets added to hours. Then we decrement minutes by 60. 
+	So this means that minutes will be going down by 60 every iteration. 
+	And while it's above or equal to 60, keep adding 1 to hours.
+Then we return the string interpolation (template literals) and pass in the hours variable
+and what remains of minutes after the while loop is done. 
+This last part can be a bit confusing. But basically the while loop brings down minutes while
+it is greater than or equal to 60. Once it stops, say there is 52 in the final iteration, this 
+number is now what minutes is within the function. Thats why when we return minutes within the string interpolation, 
+it gives us just the remaining number. It's weird.  
+
+Answer with the additional conditional which put a zero before the number if its less than 10:
+
+function timeConversion(minutes) {
+    let hours = 0
+    remainder = ""
+    while(minutes >= 60) {
+        hours += 1 
+        minutes -= 60
+    }
+
+    if (minutes < 10) {
+        remainder = `0${minutes}`
+    } else {
+	remainder = minutes
+    }
+
+    return `Hours: ${hours} Minutes: ${remainder}`
+}
+
+console.log(timeConversion(62))
+
+Full answer without using a remainder variable: <---(BEST)
+
+function timeConversion(minutes) {
+    let hours = 0 
+    for(minutes; minutes >= 60; minutes-=60) {
+        hours += 1
+    }
+
+    if(minutes < 10) {
+       minutes = `0${minutes}`
+    }
+
+    return `HOURS: ${hours} MINUTES: ${minutes}`
+}
+
+console.log(timeConversion(61))
+
+--------------------------------------------------------------------------------------------                                                                                              
+6. Count Vowels: 
+--------------------------------------------------------------------------------------------
+Write a method that takes a string and returns the number of vowels
+in the string. You may assume that all the letters are lower cased.
+You can treat "y" as a consonant.
+
+Using a for loop: <---(BEST)
+
+function countVowels(sentence) {
+    let vowels = ["a","e","i","o","u"]
+    let vnum = 0
+    for(let i = 0; i < sentence.length; i++) {
+        if(vowels.includes(sentence[i])) {
+            vnum += 1
+        }
+    }
+    return vnum
+}
+
+console.log(countVowels("batman"))
+
+Using a while loop: <---(BEST)
+
+function countVowels(sentence) {
+    let vowels = ["a","e","i","o","u"]
+    let vnum = 0
+    let i = 0
+    while(i < sentence.length) {
+        if(vowels.includes(sentence[i])) {
+            vnum += 1
+        }
+        i++
+    }
+    return vnum
+}
+
+console.log(countVowels("batman"))
+
+The long way using OR statements instead of an array.includes:
+
+function countVowels(sentence) {
+    let vnum = 0
+    for(let i = 0; i < sentence.length; i++) {
+        if(sentence[i] === "a" || sentence[i] === "e" || 
+            sentence[i] === "i" || sentence[i] === "o" || sentence[i] === "u") {
+            vnum += 1
+        }
+    }
+    return vnum
+    
+}
+
+console.log(countVowels("batman"))
+
+--------------------------------------------------------------------------------------------                                                                                              
+7. Palindrome: 
+--------------------------------------------------------------------------------------------
+Write a method that takes a string and returns true if it is a
+palindrome. A palindrome is a string that is the same whether written
+backward or forward. Assume that there are no spaces; only lowercase
+letters will be given.
+
+Using .reverse() method:
+
+const palindrome = (string) => {
+    let stringSplit = string.split("")
+    let reversed = stringSplit.reverse()
+
+    if(string === reversed.join("")) {
+        return true
+    }
+    return false 
+}
+
+console.log(palindrome("batman"))
+
+Not using .reverse() method:
+
+const palindrome = (string) => {
+    let stringSplit = string.split("")
+    let reversed = []
+    stringSplit.map(letter => reversed.unshift(letter))
+
+    if(reversed.join("") === string) {
+        return true
+    }
+    return false 
+}
+
+console.log(palindrome("racecar"))
+
+
+Using two for loops (one going forwards and one going backwards):
+
+
+const palindrome = (string) => {
+   let stringSplit = string.split("")
+   let first = []
+   let second = []
+   
+   for(let i = 0; i < stringSplit.length; i++){
+        first = stringSplit[i]
+   }
+
+   for(let j = stringSplit.length - 1 ; j >= 0; j--) {
+        second = stringSplit[j]
+    }
+
+    if(first != second) {
+        return false
+    }
+    
+    return true   
+       
+}
+
+console.log(palindrome("batman"))
+
+--------------------------------------------------------------------------------------------                                                                                              
+8. Nearby AZ: 
+--------------------------------------------------------------------------------------------
+Write a method that takes a string in and returns true if the letter
+"z" appears within three letters **after** an "a". You may assume
+that the string contains only lowercase letters.
+
+
+Using a nested for loop without splitting the string:  <---(BEST)
+
+
+function nearbyAZ(string) {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === "a") {
+      for (let j = i + 1; j < i + 4; j++) {
+        if (string[j] === "z") {
+          return true
+        }
+      }
+    }
+  }
+  return false 
+}
+
+Using a nested while loop without splitting the string: 
+
+function nearbyAZ(string) {
+  let i = 0
+  while (i < string.length) {
+    if (string[i] === "a") {
+      let j = i + 1
+      while (j < i + 4) {
+        if (string[j] === "z") {
+          return true
+        }
+        j++
+      }
+    }
+    i++
+  }
+  return false
+}
+
+console.log(nearbyAZ("Gxaxxzxx"))
+
+--------------------------------------------------------------------------------------------                                                                                              
+9. Two Sum: 
+--------------------------------------------------------------------------------------------
+Write a method that takes an array of numbers. If a pair of numbers
+in the array sums to zero, return the positions of those two numbers.
+If no pair of numbers sums to zero, return `null`.
+
+Using a nested for loop: 
+
+function twoSum(numArray) { 
+   for (let i = 0; i < numArray.length; i++) {
+       for (let j = i + 1; j < numArray.length; j++) {
+          if ( (numArray[i] + numArray[j]) === 0) {
+              return [i, j]
+          }
+       }
+   }
+   return null
+}
+
+console.log(twoSum([1,4,3,8,-4,5,6]))
+
+--------------------------------------------------------------------------------------------                                                                                              
+10. Power Of Two: 
+--------------------------------------------------------------------------------------------
+Write a method that takes in a number and returns true if it is a
+power of 2. Otherwise, return false.
+
+function powerOfTwo(num) {
+  while (true) {
+    if (num === 1) {
+      return true
+    } else if (num % 2 === 0) {
+      num = num / 2
+    } else {
+      return false
+    }
+  }
+}
+
+console.log(powerOfTwo(8))
+
+--------------------------------------------------------------------------------------------                                                                                              
+11. Third Greatest: 
+--------------------------------------------------------------------------------------------
+Write a method that takes an array of numbers in. Your method should
+return the third greatest number in the array. You may assume that
+the array has at least three numbers in it.
+
+
+                                                                                                                  
