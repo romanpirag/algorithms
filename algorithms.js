@@ -6,9 +6,8 @@
 
 const nearbyAZ = string => {
   for (let i = 0; i < string.length; i++) {
-    let g = i + 3
     if (string[i] === "a") {
-      for (let j = i + 1; j <= g; j++) {
+      for (let j = i + 1; j <= i + 3; j++) {
         if (string[j] === "z") {
           return true
         }
