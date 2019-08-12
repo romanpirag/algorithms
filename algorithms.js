@@ -1,21 +1,42 @@
 // Welcome to algorithms🦄
 
-// Write a method that takes a string in and returns true if the letter
-// "z" appears within three letters **after** an "a". You may assume
-// that the string contains only lowercase letters.
+// Write a function that will take in a number of minutes, and returns a string that formats
+// the number into "hours:minutes'.
 
-const nearbyAZ = string => {
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === "a") {
-      for (let j = i + 1; j <= i + 3; j++) {
-        if (string[j] === "z") {
-          return true
-        }
-      }
-    }
-  }
+function timeConversion(num) {
 
-  return false
+   let hours = 0
+   for (num; num >= 60; num -= 60) {
+     hours += 1
+   }
+
+   if (num < 10) {
+    num = `0${num}`
+   }
+
+  return `HOURS: ${hours}: MINUTES: ${num}`
 }
 
-console.log(nearbyAZ("bbbbbabbzbbbb"))
+console.log(timeConversion(5))
+
+
+
+
+
+
+
+
+
+
+// if (num >59){
+  //   let hours = Math.floor(num / 60)
+  //   let minutes = num%60
+  //   if (minutes <10){
+  //     return `${hours}:0${minutes}`
+  //   }
+  //   return `${hours}:${minutes}`
+  // } if (num < 10){
+  //   return  `0:0${num}`
+  // }
+  // return `0:${num}`
+  
