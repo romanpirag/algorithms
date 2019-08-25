@@ -98,7 +98,7 @@
 
 // If you want any number below ten to have a zero in front of it you have to do the following:
 
-// 1. I create a conditional statement, if minutes is less than 10, then you have to use interpolation and add a zero in front of it. 
+// 1. I create a conditional statement, if minutes is less than 10, then you have to use interpolation and add a zero in front of it.
 
 // const timeConversion = minutes => {
 //   let hours = 0
@@ -123,14 +123,22 @@
 
 // 1. I am creating a function called countVowels and passing in string as the argument.
 // 2. I am declaring a variable called vowels and setting it equal to an array with all the vowels within it (a,e,i,o,u)
-// 3. I am declaring a varialbe called vowelCounter and setting it equal to zero. 
-// 3. Next I am creating a for loop and iterating through the elements within the string by index. 
-// 4. Then I am creating a conditional stating that says if the variable vowels includes an element from string, vowelCount increments. 
+// 3. I am declaring a varialbe called vowelCounter and setting it equal to zero.
+// 3. Next I am creating a for loop and iterating through the elements within the string by index.
+// 4. Then I am creating a conditional statement that says if the variable vowels includes an element from string, vowelCount increments.
 
+function countVowels(string) {
+  let vowels = ["a", "e", "i", "o", "u"]
+  let vowelCounter = 0
 
+  for (let i = 0; i < string.length; i++) {
+    if (vowels.includes(string[i])) {
+      vowelCounter++
+    }
+  }
+  return vowelCounter
+}
 
-
-
-
+console.log(countVowels("aae"))
 
 // Count Vowels--------------------------------------------------------------------------------------------------------------------------------------------
