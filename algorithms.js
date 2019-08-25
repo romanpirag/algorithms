@@ -96,11 +96,18 @@
 // 3. I am creating a for loop and stating that while minutes is greater or equal to 60, decrement 60 from minutes, and add 1 to hours for every pass.
 // 4. I am returning an interpulated string which has the strings Hours Minutes followed by the variables for hours and minutes.
 
+// If you want any number below ten to have a zero in front of it you have to do the following:
+
+// 1. I create a conditional statement, if minutes is less than 10, then you have to use interpolation and add a zero in front of it. 
 
 const timeConversion = minutes => {
   let hours = 0
   for (minutes; minutes >= 60; minutes -= 60) {
     hours += 1
+  }
+
+  if(minutes < 10) {
+    minutes = `0${minutes}`
   }
 
   return `HOURS:${hours} MINUTES:${minutes}`
