@@ -91,6 +91,15 @@
 
 // Time Conversion--------------------------------------------------------------------------------------------------------------------------------------------
 
+
+// 1. I am creating a function called timeConversion and passing minutes into the argument. 
+// 2. I am declaring the variable hours and setting it equal to zero 
+// 3. 
+
+
+
+
+
 const timeConversion = minutes => {
 
 
