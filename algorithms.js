@@ -84,33 +84,28 @@
 //   for (num; num >= 0; num --) {
 //     sum += num
 //   }
-//   return sum 
+//   return sum
 // }
 
 // console.log(sumNums(2))
 
 // Time Conversion--------------------------------------------------------------------------------------------------------------------------------------------
 
-
-// 1. I am creating a function called timeConversion and passing minutes into the argument. 
-// 2. I am declaring the variable hours and setting it equal to zero 
-// 3. 
-
-
-
+// 1. I am creating a function called timeConversion and passing minutes into the argument.
+// 2. I am declaring the variable hours and setting it equal to zero.
+// 3. I am creating a for loop and stating that while minutes is greater or equal to 60, decrement 60 from minutes, and add 1 to hours for every pass.
+// 4. I am returning an interpulated string which has the strings Hours Minutes followed by the variables for hours and minutes.
 
 
 const timeConversion = minutes => {
+  let hours = 0
+  for (minutes; minutes >= 60; minutes -= 60) {
+    hours += 1
+  }
 
-
-
-
+  return `HOURS:${hours} MINUTES:${minutes}`
 }
 
-
-console.log(timeConversion(403))
-
+console.log(timeConversion(62))
 
 // Time Conversion--------------------------------------------------------------------------------------------------------------------------------------------
-
-
