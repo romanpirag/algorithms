@@ -29,23 +29,79 @@
 
 // Write a function that takes an integer 'num' in; it should return n*(n-1)*(n-2)*...etc
 
-
 // 1. I create a function called factorial and pass in num as the argument
-// 2. I declaire a variable and set it equal to 1 
-// 3. I create a for loop which states that while num is greater than 0 num should decrememt 
-// 4. within the for loop set the result to equal result * num 
+// 2. I declaire a variable and set it equal to 1
+// 3. I create a for loop which states that while num is greater than 0 num should decrememt
+// 4. within the for loop set the result to equal result * num
 
-// ** Make sure to not write let before the variable if using the argument within the for loop. 
-
+// ** Make sure to not write let before the variable if using the argument within the for loop.
 
 // const factorial = num => {
 //   let result = 1
 //   for (num; num > 0; num--) {
 //     result *= num
 //   }
-//   return result 
+//   return result
 // }
 
 // console.log(factorial(3))
 
-// FACTORIAL --------------------------------------------------------------------------------------------------------------------------------------------
+// LONGEST WORD --------------------------------------------------------------------------------------------------------------------------------------------
+
+// Write a function that takes in a string. Return the longest word in the string.
+
+// 1. Im going to create a function called longest string that takes a string (a sentence) as an argument
+// 2. I will declaire a variable called stringSplit and set it equal to the string argument and use the split method to create an array of every word.
+// 3. I will declare variable longestWord and set it equal to an empty string.
+// 4. I will then use the built in .find method on the stringSplit array
+// 5. and say if the variable within .find is longer than longestWord then longestWord becomes the variable within .find
+
+// const longestWord = string => {
+//   let longest = ""
+//   let stringSplit = string.split(" ")
+//   stringSplit.find(word => {
+//     if (word.length > longest.length) {
+//       longest = word
+//     }
+//   })
+//   return longest
+// }
+
+// console.log(longestWord("I am a giant porange fluffy cat"))
+
+// SUM NUMS--------------------------------------------------------------------------------------------------------------------------------------------
+
+// Write a function that takes in an integer 'num' and returns the sum of all integers between
+// Zero and num, up to and including 'num'.
+
+// 1. I create a function called sumNums and pass in num as the argument.
+// 2. I declare a variable called sum and set it equal to zero.
+// 3. I create a for loop which says that while num is greater or equal to zero, sum equals sum plus num.
+// 4. I return sum
+
+// const sumNums = num => {
+//   let sum = 0
+//   for (num; num >= 0; num --) {
+//     sum += num
+//   }
+//   return sum 
+// }
+
+// console.log(sumNums(2))
+
+// Time Conversion--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+// Time Conversion--------------------------------------------------------------------------------------------------------------------------------------------
+
+
