@@ -127,18 +127,18 @@
 // 3. Next I am creating a for loop and iterating through the elements within the string by index.
 // 4. Then I am creating a conditional statement that says if the variable vowels includes an element from string, vowelCount increments.
 
-function countVowels(string) {
-  let vowels = ["a", "e", "i", "o", "u"]
-  let vowelCounter = 0
+// function countVowels(string) {
+//   let vowels = ["a", "e", "i", "o", "u"]
+//   let vowelCounter = 0
 
-  for (let i = 0; i < string.length; i++) {
-    if (vowels.includes(string[i])) {
-      vowelCounter++
-    }
-  }
-  return vowelCounter
-}
+//   for (let i = 0; i < string.length; i++) {
+//     if (vowels.includes(string[i])) {
+//       vowelCounter++
+//     }
+//   }
+//   return vowelCounter
+// }
 
-console.log(countVowels("aae"))
+// console.log(countVowels("aae"))
 
 // Count Vowels--------------------------------------------------------------------------------------------------------------------------------------------
