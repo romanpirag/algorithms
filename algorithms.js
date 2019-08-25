@@ -100,24 +100,32 @@
 
 // 1. I create a conditional statement, if minutes is less than 10, then you have to use interpolation and add a zero in front of it. 
 
-const timeConversion = minutes => {
-  let hours = 0
-  for (minutes; minutes >= 60; minutes -= 60) {
-    hours += 1
-  }
+// const timeConversion = minutes => {
+//   let hours = 0
+//   for (minutes; minutes >= 60; minutes -= 60) {
+//     hours += 1
+//   }
 
-  if(minutes < 10) {
-    minutes = `0${minutes}`
-  }
+//   if(minutes < 10) {
+//     minutes = `0${minutes}`
+//   }
 
-  return `HOURS:${hours} MINUTES:${minutes}`
-}
+//   return `HOURS:${hours} MINUTES:${minutes}`
+// }
 
-console.log(timeConversion(62))
+// console.log(timeConversion(62))
 
 // Count Vowels--------------------------------------------------------------------------------------------------------------------------------------------
 
+// Write a method that takes a string and returns the number of vowels
+// in the string. You may assume that all the letters are lower cased.
+// You can treat "y" as a consonant.
 
+// 1. I am creating a function called countVowels and passing in string as the argument.
+// 2. I am declaring a variable called vowels and setting it equal to an array with all the vowels within it (a,e,i,o,u)
+// 3. I am declaring a varialbe called vowelCounter and setting it equal to zero. 
+// 3. Next I am creating a for loop and iterating through the elements within the string by index. 
+// 4. Then I am creating a conditional stating that says if the variable vowels includes an element from string, vowelCount increments. 
 
 
 
