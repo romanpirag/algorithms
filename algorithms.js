@@ -145,7 +145,7 @@
 
 // const isPrime = num => {
 //   if (num <= 1) {
-//       return false 
+//       return false
 //   }
 
 //   for (let i = 2; i < num; i ++) {
@@ -172,13 +172,16 @@
 
 // Fibonacci ----------------------------
 
+// const fibonacci = num => {
+//   if (num === 0) {
+//     return 0
+//   } else if (num === 1) {
+//     return 1
+//   } else {
+//     return fibonacci(num - 1) + fibonacci(num - 2)
+//   }
+// }
 
-const fibonacci = num => {
-    
+// console.log(fibonacci(10))
 
-
-}
-
-console.log(fibonacci(6))
-
-
+// Fibonacci ----------------------------
