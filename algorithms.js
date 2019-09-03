@@ -160,19 +160,25 @@
 
 // Factorial ----------------------------
 
-const factorial = num => {
-    let sum = 1
-    for (num; num > 0; num--) {
-        sum *= num
-    }
-    return sum
+// const factorial = num => {
+//     let sum = 1
+//     for (num; num > 0; num--) {
+//         sum *= num
+//     }
+//     return sum
+// }
+
+// console.log(factorial(6))
+
+// Fibonacci ----------------------------
+
+
+const fibonacci = num => {
+    
+
+
 }
 
-console.log(factorial(6))
-
-// Factorial ----------------------------
-
-
-
+console.log(fibonacci(6))
 
 
