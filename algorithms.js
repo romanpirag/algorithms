@@ -201,16 +201,16 @@
 
 // filter----------------------------
 
-const filter = (array, callback) => {
-    let lessThan = []
-    for (let i = 0; i < array.length; i++) {
-        if (callback(array[i])) {
-            lessThan.push(array[i])
-        }
-    }
-    return lessThan
-}
+// const filter = (array, callback) => {
+//     let lessThan = []
+//     for (let i = 0; i < array.length; i++) {
+//         if (callback(array[i])) {
+//             lessThan.push(array[i])
+//         }
+//     }
+//     return lessThan
+// }
 
-console.log(filter([1, 2, 3, 4], n => n < 3))  
+// console.log(filter([1, 2, 3, 4], n => n < 3))  
 
 // filter----------------------------
