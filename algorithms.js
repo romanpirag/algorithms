@@ -201,10 +201,14 @@
 
 // filter----------------------------
 
+const filter = (array, callback) => {
+    for (let i = 0; i < array.length; i++) {
+        if (callback(array[i])) {
+            return true
+        }
+    }
+}
 
-
-
-
-
+console.log(filter([1, 2, 3, 4], n => n < 3))  
 
 // filter----------------------------
