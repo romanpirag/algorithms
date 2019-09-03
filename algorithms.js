@@ -143,19 +143,36 @@
 
 // Is Prime--------------------------------------------------------------------------------------------------------------------------------------------
 
-const isPrime = num => {
-  if (num <= 1) {
-      return false 
-  }
+// const isPrime = num => {
+//   if (num <= 1) {
+//       return false 
+//   }
 
-  for (let i = 2; i < num; i ++) {
-      if (num % i === 0) {
-          return `Not Prime🤬`
-      }
-  }
-  return "Prime!!🦋"
+//   for (let i = 2; i < num; i ++) {
+//       if (num % i === 0) {
+//           return `Not Prime🤬`
+//       }
+//   }
+//   return "Prime!!🦋"
+// }
+
+// console.log(isPrime(7))
+
+// Factorial ----------------------------
+
+const factorial = num => {
+    let sum = 1
+    for (num; num > 0; num--) {
+        sum *= num
+    }
+    return sum
 }
 
-console.log(isPrime(7))
+console.log(factorial(6))
+
+// Factorial ----------------------------
+
+
+
 
 
