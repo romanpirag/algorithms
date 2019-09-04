@@ -217,9 +217,9 @@
 
 const reduce = (array, callback, startingValue) => {
     for (let i = 0; i < array.length; i++) {
-       let sum = callback(startingValue, array[i])
-       return sum
+      startingValue = callback(startingValue, array[i])
     }
+    return startingValue
 }
 
 
