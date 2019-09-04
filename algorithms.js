@@ -211,7 +211,7 @@
 //     return lessThan
 // }
 
-// console.log(filter([1, 2, 3, 4], n => n < 3))  
+// console.log(filter([1, 2, 3, 4], n => n < 3))
 
 // reduce----------------------------
 
@@ -222,19 +222,37 @@
 //     return startingValue
 // }
 
-
 // console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0))
 
 // mostCommonLetter----------------------------
 
+const mostCommonLetter = string => {
+  let letterCount = {}
+  for (let i = 0; i < string.length; i++) {
+    if (letterCount[string[i]]) {
+      letterCount[string[i]] += 1
+    } else {
+      letterCount[string[i]] = 1
+    }
+  }
 
 
+  let highest = 0
+  let highestObj = []
 
+  Object.keys(letterCount).forEach(letter => {
+    let value = letterCount.letter
+    console.log(value)
+    if(value > highest) {
+        highest = value
+        highestObj = [letter, value]
+    }
+  })
 
+  return highestObj
+ 
+}
 
-
-
-console.log(mostCommonLetter("batmannn"))
-
+console.log(mostCommonLetter("Battttmaxxxx"))
 
 // mostCommonLetter----------------------------
