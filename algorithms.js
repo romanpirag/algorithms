@@ -226,33 +226,53 @@
 
 // mostCommonLetter----------------------------
 
-const mostCommonLetter = string => {
-  let letterCount = {}
-  for (let i = 0; i < string.length; i++) {
-    if (letterCount[string[i]]) {
-      letterCount[string[i]] += 1
-    } else {
-      letterCount[string[i]] = 1
-    }
-  }
+// const mostCommonLetter = string => {
+//   let letterCount = {}
+//   for (let i = 0; i < string.length; i++) {
+//     if (letterCount[string[i]]) {
+//       letterCount[string[i]] += 1
+//     } else {
+//       letterCount[string[i]] = 1
+//     }
+//   }
 
+//   let highest = 0
+//   let highestObj = []
 
-  let highest = 0
-  let highestObj = []
+//   Object.keys(letterCount).forEach(letter => {
+//     let value = letterCount.letter
+//     console.log(value)
+//     if(value > highest) {
+//         highest = value
+//         highestObj = [letter, value]
+//     }
+//   })
 
-  Object.keys(letterCount).forEach(letter => {
-    let value = letterCount.letter
-    console.log(value)
-    if(value > highest) {
-        highest = value
-        highestObj = [letter, value]
-    }
-  })
+//   return highestObj
 
-  return highestObj
- 
-}
+// }
 
-console.log(mostCommonLetter("Battttmaxxxx"))
+// console.log(mostCommonLetter("Battttmaxxxx"))
 
 // mostCommonLetter----------------------------
+
+// const mostCommonLetter = string => {
+//   let mcl
+//   let mclc = 0
+
+//   for (let i = 0; i < string.length; i++) {
+//     let count = 0
+//     for (let j = 0; j < string.length; j++) {
+//       if (string[i] === string[j]) {
+//         count += 1
+//       }
+//     }
+//     if (count > mclc) {
+//       mcl = string[i]
+//       mclc = count
+//     }
+//   }
+//   return [mcl, mclc]
+// }
+
+// console.log(mostCommonLetter("Happppppppppycakes"))
