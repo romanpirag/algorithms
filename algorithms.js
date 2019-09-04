@@ -215,4 +215,14 @@
 
 // reduce----------------------------
 
+const reduce = (array, callback, startingValue) => {
+    for (let i = 0; i < array.length; i++) {
+       let sum = callback(startingValue, array[i])
+       return sum
+    }
+}
+
+
+console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0))
+
 
