@@ -215,14 +215,26 @@
 
 // reduce----------------------------
 
-const reduce = (array, callback, startingValue) => {
-    for (let i = 0; i < array.length; i++) {
-      startingValue = callback(startingValue, array[i])
-    }
-    return startingValue
-}
+// const reduce = (array, callback, startingValue) => {
+//     for (let i = 0; i < array.length; i++) {
+//       startingValue = callback(startingValue, array[i])
+//     }
+//     return startingValue
+// }
 
 
-console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0))
+// console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0))
+
+// mostCommonLetter----------------------------
 
 
+
+
+
+
+
+
+console.log(mostCommonLetter("batmannn"))
+
+
+// mostCommonLetter----------------------------
