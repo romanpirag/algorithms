@@ -53,14 +53,6 @@ let reverseString = string => {
 
 console.log(reverseString("batman"))  
 
-Using forEach (arrow function condensed):
-
-let reverseString = string => {
-  let stringSplit = string.split("")
-  let reversed = []
-  stringSplit.forEach(letter => reversed.unshift(letter)) 
-  return reversed.join("")
-}
 
 console.log(reverseString("batman"))
 
