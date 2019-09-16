@@ -16,14 +16,7 @@ AppAcademy Practice Problems:
 --------------------------------------------------------------------------------------------
 Write a function that will take a string as input, and return a new string with the same letters in reverse order. 
 
-Using .map: <---(BEST)
 
-let reverseString = string => {
-  let stringSplit = string.split("")
-  let reversed = []
-  stringSplit.map(letter => reversed.unshift(letter)) 
-  return reversed.join("")
-}
 
 console.log(reverseString("batman")) 
 
