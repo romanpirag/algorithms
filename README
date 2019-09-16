@@ -231,6 +231,20 @@ console.log(longestWord("I am a happy boy"))
 
 --------------------------------------------------------------------------------------------                                                                                              
 4. Sum Nums: 
+--------------------------------------------------------------------------------------------
+Write a function that takes in an integer 'num' and returns the sum of all integers between
+Zero and num, up to and including 'num'. 
+
+Doing it backwards with a while loop:  <---(BEST)
+
+function sumNums(num) {
+    sum = 0
+    while(num > 0) {
+        sum += num
+        num-- 
+    }
+    return sum 
+}
 
 
 console.log(sumNums(6))
