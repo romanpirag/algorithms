@@ -340,24 +340,7 @@ function timeConversion(minutes) {
     return `Hours: ${hours} Minutes: ${remainder}`
 }
 
-console.log(timeConversion(62))
 
-Full answer without using a remainder variable: <---(BEST)
-
-function timeConversion(minutes) {
-    let hours = 0 
-    for(minutes; minutes >= 60; minutes-=60) {
-        hours += 1
-    }
-
-    if(minutes < 10) {
-       minutes = `0${minutes}`
-    }
-
-    return `HOURS: ${hours} MINUTES: ${minutes}`
-}
-
-console.log(timeConversion(61))
 
 --------------------------------------------------------------------------------------------                                                                                              
 6. Count Vowels: 
