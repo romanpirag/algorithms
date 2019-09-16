@@ -291,7 +291,19 @@ fifth iteration: sum 5 + result = 10 | so result = 15
 sixth iteration: sum 6 + result = 15 | so result = 21
 
 --------------------------------------------------------------------------------------------                                                                                              
+5. Time Conversion: 
+--------------------------------------------------------------------------------------------
+Write a function that will take in a number of minutes, and returns a string that formats
+the number into "hours:minutes'.
 
+function timeConversion(minutes) {
+    let hours = 0 
+    while(minutes >= 60) {
+        hours += 1
+        minutes -= 60
+    }
+    return `Hours: ${hours} Minutes: ${minutes}`
+}
 
 console.log(timeConversion(592))
 
