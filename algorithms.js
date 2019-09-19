@@ -275,4 +275,4 @@
 //   return [mcl, mclc]
 // }
 
-console.log(mostCommonLetter("Happppppppppycakes"))
+// console.log(mostCommonLetter("Happppppppppycakes"))
