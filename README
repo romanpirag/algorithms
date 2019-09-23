@@ -381,7 +381,20 @@ function countVowels(sentence) {
 
 console.log(countVowels("batman"))
 
+Using a while loop: <---(BEST)
 
+function countVowels(sentence) {
+    let vowels = ["a","e","i","o","u"]
+    let vnum = 0
+    let i = 0
+    while(i < sentence.length) {
+        if(vowels.includes(sentence[i])) {
+            vnum += 1
+        }
+        i++
+    }
+    return vnum
+}
 
 console.log(countVowels("batman"))
 
