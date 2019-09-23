@@ -247,14 +247,7 @@ function sumNums(num) {
 }
 
 
-console.log(sumNums(6))
 
-first iteration: sum: 0 + num 6 | sum = 6   
-second iteration: sum: 6 + num 5 | sum = 11 
-third iteration: sum: 11 + num 4 | sum = 15 
-fourth iteration: sum: 15 + num 3 | sum = 18
-fifth iteration: sum: 18 + num 2 | sum = 20 
-sixth iteration: sum: 20 + num 1 | sum = 21 
 
 Using a while loop: 
 
