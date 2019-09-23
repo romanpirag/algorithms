@@ -283,6 +283,12 @@ const sumNums = num => {
 
 console.log(sumNums(6))
 
+first iteration: sum: 1 + result = 0 | so result = 1
+second iteration: sum: 2 + result = 1| so result = 3
+third iteration: sum: 3 + result = 3 | so result = 6
+fourth iteration: sum 4 + result = 6 | so result = 10
+fifth iteration: sum 5 + result = 10 | so result = 15
+sixth iteration: sum 6 + result = 15 | so result = 21
 
 --------------------------------------------------------------------------------------------                                                                                              
 5. Time Conversion: 
