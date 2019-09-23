@@ -344,7 +344,110 @@ console.log(timeConversion(62))
 
 Full answer without using a remainder variable: <---(BEST)
 
+function timeConversion(minutes) {
+    let hours = 0 
+    for(minutes; minutes >= 60; minutes-=60) {
+        hours += 1
+    }
 
+    if(minutes < 10) {
+       minutes = `0${minutes}`
+    }
+
+    return `HOURS: ${hours} MINUTES: ${minutes}`
+}
+
+console.log(timeConversion(61))
+
+--------------------------------------------------------------------------------------------                                                                                              
+6. Count Vowels: 
+--------------------------------------------------------------------------------------------
+Write a method that takes a string and returns the number of vowels
+in the string. You may assume that all the letters are lower cased.
+You can treat "y" as a consonant.
+
+Using a for loop: <---(BEST)
+
+function countVowels(sentence) {
+    let vowels = ["a","e","i","o","u"]
+    let vnum = 0
+    for(let i = 0; i < sentence.length; i++) {
+        if(vowels.includes(sentence[i])) {
+            vnum += 1
+        }
+    }
+    return vnum
+}
+
+console.log(countVowels("batman"))
+
+Using a while loop: <---(BEST)
+
+function countVowels(sentence) {
+    let vowels = ["a","e","i","o","u"]
+    let vnum = 0
+    let i = 0
+    while(i < sentence.length) {
+        if(vowels.includes(sentence[i])) {
+            vnum += 1
+        }
+        i++
+    }
+    return vnum
+}
+
+console.log(countVowels("batman"))
+
+The long way using OR statements instead of an array.includes:
+
+function countVowels(sentence) {
+    let vnum = 0
+    for(let i = 0; i < sentence.length; i++) {
+        if(sentence[i] === "a" || sentence[i] === "e" || 
+            sentence[i] === "i" || sentence[i] === "o" || sentence[i] === "u") {
+            vnum += 1
+        }
+    }
+    return vnum
+    
+}
+
+console.log(countVowels("batman"))
+
+--------------------------------------------------------------------------------------------                                                                                              
+7. Palindrome: 
+--------------------------------------------------------------------------------------------
+Write a method that takes a string and returns true if it is a
+palindrome. A palindrome is a string that is the same whether written
+backward or forward. Assume that there are no spaces; only lowercase
+letters will be given.
+
+Using .reverse() method:
+
+const palindrome = (string) => {
+    let stringSplit = string.split("")
+    let reversed = stringSplit.reverse()
+
+    if(string === reversed.join("")) {
+        return true
+    }
+    return false 
+}
+
+console.log(palindrome("batman"))
+
+Not using .reverse() method:
+
+const palindrome = (string) => {
+    let stringSplit = string.split("")
+    let reversed = []
+    stringSplit.map(letter => reversed.unshift(letter))
+
+    if(reversed.join("") === string) {
+        return true
+    }
+    return false 
+}
 
 console.log(palindrome("racecar"))
 
