@@ -118,7 +118,16 @@ const reverseString = (string) => {
     return reversed 
 }
 
-
+TALKING THROUGH IT:
+Here they first create an empty string called reversed_string.
+Then they make a counter called i that starts at 0.
+While i is less than string.length just says, do this next part until i is the length of the string. 
+Obviously down below they increment i by 1 each iteration to make that happen. 
+Then the while loop they say, reversed_string is equal to the index of string (which will go up each time incrementally due to i, 
+plus the reversed_string.
+What this creates is a situation where each index is placed into reversed_string, 
+and each time it goes through an iteration, the last number is shifted forward and the new number is placed in front. 
+Thats what creates the reversed function. 
 
 --------------------------------------------------------------------------------------------                                                                                              
 2. Factorial: 
