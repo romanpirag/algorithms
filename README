@@ -318,7 +318,22 @@ it gives us just the remaining number. It's weird.
 
 Answer with the additional conditional which put a zero before the number if its less than 10:
 
+function timeConversion(minutes) {
+    let hours = 0
+    remainder = ""
+    while(minutes >= 60) {
+        hours += 1 
+        minutes -= 60
+    }
 
+    if (minutes < 10) {
+        remainder = `0${minutes}`
+    } else {
+	remainder = minutes
+    }
+
+    return `Hours: ${hours} Minutes: ${remainder}`
+}
 
 console.log(timeConversion(62))
 
