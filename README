@@ -180,18 +180,7 @@ Then you have to return the result outside of the while loop.
 Write a function that takes in a string. Return the longest word in the string. 
 
 
-Using .find: <---(BEST)
 
-const longestWord = (sentence) => {
-    let splitSent = sentence.split(" ")
-    longest = ""
-    splitSent.find(word => {
-        if (word.length > longest.length) {
-            longest = word
-        }
-    })
-    return longest
-}
 
 console.log(longestWord("I am happycakes to be here"))
 
