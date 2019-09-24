@@ -1,6 +1,12 @@
 🤖JavaScript Algorithms                                                                                                             
             
-         
+ 
+ARRAY METHODS-------------------------------------------------------------------------------
+.map: Does specific action to every element within an array and returns a new array. 
+.filter: Returns a new array with the desired outcome specified. 
+.reject: The opposite of .filter returns a new array with everything minus specified.
+.find: Returns the first element that matches specified outcome. 
+--------------------------------------------------------------------------------------------          
 
 --------------------------------------------------------------------------------------------                                                                                      
 AppAcademy Practice Problems:
