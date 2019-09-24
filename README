@@ -545,25 +545,7 @@ function twoSum(numArray) {
 
 console.log(twoSum([1,4,3,8,-4,5,6]))
 
---------------------------------------------------------------------------------------------                                                                                              
-10. Power Of Two: 
---------------------------------------------------------------------------------------------
-Write a method that takes in a number and returns true if it is a
-power of 2. Otherwise, return false.
 
-function powerOfTwo(num) {
-  while (true) {
-    if (num === 1) {
-      return true
-    } else if (num % 2 === 0) {
-      num = num / 2
-    } else {
-      return false
-    }
-  }
-}
-
-console.log(powerOfTwo(8))
 
 --------------------------------------------------------------------------------------------                                                                                              
 11. Third Greatest: 
