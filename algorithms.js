@@ -283,20 +283,40 @@
 // If its divisible by 5 log buzz.
 // If its divisible by 3 and 5 then log fizzBuzz.
 
-const fizzBuzz = num => {
-  for (let i = 1; i <= num; i++) {
-    if (i % 5 === 0 && i % 3 === 0) {
-      console.log("FizzBuzz")
-    } else if (i % 3 === 0) {
-        console.log("Fizz")
-    } else if (i % 5 === 0) {
-        console.log("Buzz")
-    } else {
-        console.log(i)
-    }
-  }
-}
+// const fizzBuzz = num => {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 5 === 0 && i % 3 === 0) {
+//       console.log("FizzBuzz")
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz")
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz")
+//     } else {
+//         console.log(i)
+//     }
+//   }
+// }
 
-fizzBuzz(40)
+// fizzBuzz(40)
 
 // FizzBuzz----------------------------
+
+
+function isPalindrome(string) {
+    let stringLowerCase = string.toLowerCase()
+    console.log
+    let reversed = []
+    let stringSplit = stringLowerCase.split("")
+    for(let i = 0; i < string.length; i++) {
+        reversed.unshift(stringLowerCase[i])
+    }
+
+    if (stringLowerCase === reversed.join("")) {
+      return true
+    }
+
+    return false 
+}
+
+
+console.log(isPalindrome("Racecar"))
