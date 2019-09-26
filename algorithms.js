@@ -279,17 +279,16 @@
 
 // FizzBuzz----------------------------
 
-const fizzBuzz = num => {
-    for(let i = 0; i < num.length; i++) {
-        return i 
+const allNumbers = (num) => {
+    for(let i = 0; i <= num; i++) {
+        console.log(i)
     }
     
-
 }
 
 
 
-console.log(fizzBuzz(20))
+allNumbers(20)
 
 
 
