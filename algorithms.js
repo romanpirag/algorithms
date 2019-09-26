@@ -299,24 +299,31 @@
 
 // fizzBuzz(40)
 
-// FizzBuzz----------------------------
-
+// isPalindrom----------------------------
 
 function isPalindrome(string) {
-    let stringLowerCase = string.toLowerCase()
-    console.log
-    let reversed = []
-    let stringSplit = stringLowerCase.split("")
-    for(let i = 0; i < string.length; i++) {
-        reversed.unshift(stringLowerCase[i])
+  let stringLowerCase = string.toLowerCase()
+  let stringSplit = stringLowerCase.split("")
+  let validCharacters = "abcdefghijklmnopqrstuvwxyz".split("")
+  let characters = []
+  let reversed = []
+  for (let i = 0; i < string.length; i++) {
+    if (validCharacters.includes(stringLowerCase[i])) {
+      characters.push(stringLowerCase[i])
     }
+  }
+ 
+  for (let j = 0; j < characters.length; j++) {
+    reversed.unshift(characters[j])
+  }
 
-    if (stringLowerCase === reversed.join("")) {
-      return true
-    }
+  if (characters.join("") === reversed.join("")) {
+    return true
+  }
 
-    return false 
+  return false
 }
 
+console.log(isPalindrome("Madam I'm Adam"))
 
-console.log(isPalindrome("Racecar"))
+// isPalindrom----------------------------
