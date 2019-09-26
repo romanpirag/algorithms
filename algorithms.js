@@ -276,3 +276,21 @@
 // }
 
 // console.log(mostCommonLetter("Happppppppppycakes"))
+
+// FizzBuzz----------------------------
+
+const fizzBuzz = num => {
+    for(let i = 0; i < num.length; i++) {
+        return i 
+    }
+    
+
+}
+
+
+
+console.log(fizzBuzz(20))
+
+
+
+// FizzBuzz----------------------------
