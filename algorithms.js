@@ -335,35 +335,35 @@
 // 5. Im going to then figure out how to check the values of the object and 
 
 
-const mostCommonLetter = string => {
-    let letterCount = {}
-    for(let i = 0; i < string.length; i++) {
-        if(letterCount[string[i]]) {
-            letterCount[string[i]] += 1
-        } else {
-            letterCount[string[i]] = 1 
-        }
-    }
+// const mostCommonLetter = string => {
+//     let letterCount = {}
+//     for(let i = 0; i < string.length; i++) {
+//         if(letterCount[string[i]]) {
+//             letterCount[string[i]] += 1
+//         } else {
+//             letterCount[string[i]] = 1 
+//         }
+//     }
     
-    let highest = 0
-    let highestObj = []
+//     let highest = 0
+//     let highestObj = []
 
-    Object.keys(letterCount).forEach(letter => {
-        let value = letterCount[letter]
-        if(value > highest) {
-            highest = value 
-            highestObj = [letter, value]
-        }
+//     Object.keys(letterCount).forEach(letter => {
+//         let value = letterCount[letter]
+//         if(value > highest) {
+//             highest = value 
+//             highestObj = [letter, value]
+//         }
     
-    })
+//     })
 
-    console.log(highestObj)
-
-
-}
+//     console.log(highestObj)
 
 
-console.log(mostCommonLetter("battttttman"))
+// }
+
+
+// console.log(mostCommonLetter("battttttman"))
 
 
 
