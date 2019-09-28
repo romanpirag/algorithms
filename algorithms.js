@@ -360,3 +360,34 @@
 // }
 
 // console.log(mostCommonLetter("battttttman"))
+
+
+const mostCommonLetter = string => {
+  const letterCount = {}
+  for(let i = 0; i < string.length; i++) {
+    if(letterCount[string[i]]) {
+      letterCount[string[i]] += 1
+    } else {
+      letterCount[string[i]] = 1
+    }
+    console.log(`ITERRATION ${i}:`)
+    console.log(letterCount)
+  }
+
+  let highestValue = 0 
+  let mostCommon
+
+  Object.keys(letterCount).map(letter => {
+    value = letterCount[letter]
+    if(value > highestValue) {
+      highestValue = value
+      console.log("VALUE:", highestValue)
+      mostCommon = `LETTER: ${letter} COUNT: ${value}`
+      
+    }
+  })
+  return mostCommon
+}
+
+
+console.log(mostCommonLetter("batmannn"))
