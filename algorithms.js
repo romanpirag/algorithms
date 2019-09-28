@@ -392,4 +392,3 @@
 
 // console.log(mostCommonLetter("batmannn"))
 
-// mostCommonletter---------------------------
