@@ -312,17 +312,16 @@
 //       characters.push(stringLowerCase[i])
 //     }
 //   }
- 
-//   for (let j = 0; j < characters.length; j++) {
-//     reversed.unshift(characters[j])
-//   }
 
-//   if (characters.join("") === reversed.join("")) {
-//     return true
-//   }
+for (let j = 0; j < characters.length; j++) {
+  reversed.unshift(characters[j]);
+}
 
-//   return false
-// }
+if (characters.join("") === reversed.join("")) {
+  return true;
+}
+
+return false;
 
 // console.log(isPalindrome("Madam I'm Adam"))
 
@@ -331,9 +330,8 @@
 // 1. Going to create an empty object called letterCount
 // 2. Im going to split the string argument and set it to the variable splitString
 // 3. Im going to create a conditional for loop going through the new splitString array
-// 4. Im going to check if key exists within letterCount, if yes add 1. If no, create it and set to 1. 
-// 5. Im going to then figure out how to check the values of the object and 
-
+// 4. Im going to check if key exists within letterCount, if yes add 1. If no, create it and set to 1.
+// 5. Im going to then figure out how to check the values of the object and
 
 // const mostCommonLetter = string => {
 //     let letterCount = {}
@@ -341,29 +339,24 @@
 //         if(letterCount[string[i]]) {
 //             letterCount[string[i]] += 1
 //         } else {
-//             letterCount[string[i]] = 1 
+//             letterCount[string[i]] = 1
 //         }
 //     }
-    
+
 //     let highest = 0
 //     let highestObj = []
 
 //     Object.keys(letterCount).forEach(letter => {
 //         let value = letterCount[letter]
 //         if(value > highest) {
-//             highest = value 
+//             highest = value
 //             highestObj = [letter, value]
 //         }
-    
+
 //     })
 
 //     console.log(highestObj)
 
-
 // }
 
-
 // console.log(mostCommonLetter("battttttman"))
-
-
-
