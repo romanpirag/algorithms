@@ -313,15 +313,15 @@
 //     }
 //   }
 
-for (let j = 0; j < characters.length; j++) {
-  reversed.unshift(characters[j]);
-}
+// for (let j = 0; j < characters.length; j++) {
+//   reversed.unshift(characters[j]);
+// }
 
-if (characters.join("") === reversed.join("")) {
-  return true;
-}
+// if (characters.join("") === reversed.join("")) {
+//   return true;
+// }
 
-return false;
+// return false;
 
 // console.log(isPalindrome("Madam I'm Adam"))
 
