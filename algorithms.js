@@ -396,30 +396,54 @@
 // return the third greatest number in the array.You may assume that
 // the array has at least three numbers in it.
 
-const thirdGreatest = array => {
-  let firstGreatest = 0;
-  let secondGreatest = 0;
-  let thirdGreatest = 0;
+// const thirdGreatest = array => {
+//   let firstGreatest = 0;
+//   let secondGreatest = 0;
+//   let thirdGreatest = 0;
 
-  for(let i = 0; i < array.length; i++) {
-    if(array[i] > firstGreatest) {
-      firstGreatest = array[i]
-    }
+//   for(let i = 0; i < array.length; i++) {
+//     if(array[i] > firstGreatest) {
+//       firstGreatest = array[i]
+//     }
+//   }
+
+//   for(let j = 0; j < array.length; j++) {
+//     if(array[j] < firstGreatest && array[j] > secondGreatest) {
+//       secondGreatest = array[j]
+//     }
+//   }
+
+//   for(let z = 0; z < array.length; z++) {
+//     if(array[z] < secondGreatest && array[z] > thirdGreatest) {
+//       thirdGreatest = array[z]
+//     }
+//   }
+
+//   return thirdGreatest
+// };
+
+// console.log(thirdGreatest([1, 3, 4, 5, 10, 7]));
+
+// const thirdGreatest = function(array) {
+//   let firstGreatest = 0;
+//   let secondGreatest = 0;
+//   let thirdGreatest = 0;
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] > firstGreatest) {
+    thirdGreatest = secondGreatest;
+    secondGreatest = firstGreatest;
+    firstGreatest = array[i];
+  } else if (array[i] > secondGreatest) {
+    thirdGreatest = secondGreatest;
+    secondGreatest = array[i];
+  } else if (array[i] > thirdGreatest) {
+    thirdGreatest = array[i];
   }
+}
 
-  for(let j = 0; j < array.length; j++) {
-    if(array[j] < firstGreatest && array[j] > secondGreatest) {
-      secondGreatest = array[j]
-    }
-  }
+//   return thirdGreatest
 
-  for(let z = 0; z < array.length; z++) {
-    if(array[z] < secondGreatest && array[z] > thirdGreatest) {
-      thirdGreatest = array[z]
-    }
-  }
+// }
 
-  return thirdGreatest
-};
-
-console.log(thirdGreatest([1, 3, 4, 5, 10, 7]));
+// console.log(thirdGreatest([4,1,10,8]))
