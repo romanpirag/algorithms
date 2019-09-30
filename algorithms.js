@@ -361,7 +361,6 @@
 
 // console.log(mostCommonLetter("battttttman"))
 
-
 // const mostCommonLetter = string => {
 //   const letterCount = {}
 //   for(let i = 0; i < string.length; i++) {
@@ -374,7 +373,7 @@
 //     console.log(letterCount)
 //   }
 
-//   let highestValue = 0 
+//   let highestValue = 0
 //   let mostCommon
 
 //   Object.keys(letterCount).map(letter => {
@@ -383,12 +382,44 @@
 //       highestValue = value
 //       console.log("VALUE:", highestValue)
 //       mostCommon = `LETTER: ${letter} COUNT: ${value}`
-      
+
 //     }
 //   })
 //   return mostCommon
 // }
 
-
 // console.log(mostCommonLetter("batmannn"))
 
+// 11. Third Greatest:
+// --------------------------------------------------------------------------------------------
+//   Write a method that takes an array of numbers in.Your method should
+// return the third greatest number in the array.You may assume that
+// the array has at least three numbers in it.
+
+const thirdGreatest = array => {
+  let firstGreatest = 0;
+  let secondGreatest = 0;
+  let thirdGreatest = 0;
+
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] > firstGreatest) {
+      firstGreatest = array[i]
+    }
+  }
+
+  for(let j = 0; j < array.length; j++) {
+    if(array[j] < firstGreatest && array[j] > secondGreatest) {
+      secondGreatest = array[j]
+    }
+  }
+
+  for(let z = 0; z < array.length; z++) {
+    if(array[z] < secondGreatest && array[z] > thirdGreatest) {
+      thirdGreatest = array[z]
+    }
+  }
+
+  return thirdGreatest
+};
+
+console.log(thirdGreatest([1, 3, 4, 5, 10, 7]));
