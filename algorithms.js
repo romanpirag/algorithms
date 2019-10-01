@@ -442,8 +442,8 @@
 //   }
 // }
 
-  return thirdGreatest
+//   return thirdGreatest
 
-}
+// }
 
-console.log(thirdGreatest([4,1,10,8]))
+// console.log(thirdGreatest([4,1,10,8]))
