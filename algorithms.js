@@ -447,3 +447,20 @@
 // }
 
 // console.log(thirdGreatest([4,1,10,8]))
+
+// --------------------------------------------------------------------------------------------
+// 11. Reverse Words in place:
+// --------------------------------------------------------------------------------------------
+
+const reverseWords = string => {
+  let stringSplit = string.split("");
+  let reversed = [];
+  stringSplit.map(letter => {
+    reversed.unshift(letter);
+  });
+
+  let doubleReversed = reversed.join("").split(" ");
+  return doubleReversed.reverse().join(" ");
+};
+
+console.log(reverseWords("batman joker superman"));
